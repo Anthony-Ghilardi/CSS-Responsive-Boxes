@@ -1,3 +1,38 @@
 body {
   background: blanchedalmond;
 }
+
+* {
+  border: 1px solid teal;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+header, footer {
+  flex-grow: 3;
+}
+
+main {
+  flex-grow: 1;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+      header {
+        width:100%;
+      }
+      main, footer, header {
+        margin: 1em;
+      }
+    }
