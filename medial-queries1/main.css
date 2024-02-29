@@ -2,28 +2,55 @@ body {
   background: blanchedalmond;
 }
 
-* {
-  border: 1px solid teal;
-}
-
 .container {
   display: flex;
   flex-wrap: wrap;
   min-height: 100vh;
+  min-width: 100vw;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
 }
 
-header, footer {
-  flex-grow: 3;
+.a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  border: solid;
+  min-width: 100vw;
+  min-height: 10vh;
 }
 
-main {
+.b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: yellow;
+  border: solid;
+  min-width: 65vw;
+  min-height: 70vh;
+}
+
+.c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: orange;
+  border: solid;
+  min-width: 30vw;
+  min-height: 80vh;
+}
+
+.a, .c {
   flex-grow: 1;
 }
 
-@media (min-width: 1200px) {
+.b {
+  flex-grow: 1;
+}
+
+@media (min-width: 800px) {
   .container {
     flex-direction: row;
     flex-wrap: wrap;
