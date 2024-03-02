@@ -4,70 +4,68 @@ body {
 
 .container {
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
-  flex-wrap: wrap;
+  justify-content: space-between;
   border: solid red;
-  gap: 20px;
-  padding: 5px;
-  margin: 5px;
-  height: 90vh;
 }
 
-/* A box */
-header {
-  min-width: 10vw;
-  min-height: 10vh;
-  border: solid teal;
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70vh;
 }
 
-/* B box */
+header, footer, aside, .wrapper  {
+  flex-grow: 1;
+  margin: .5em;
+  max-height: 10vh;
+}
+
+aside  {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  min-height: 20vh;
+}
+
+aside > div {
+  flex-grow: 1;
+  margin: .5em;
+}
+
 main { 
-  min-width: 10vw;
-  min-height: 50vh;
+  width: 90%;
+  flex-grow: 1;
+  margin: .5em;
   border: solid teal;
 }
 
-/* C D E Box */
-aside {
-  min-width: 68.5vw;
-  min-height: 10vh;
-  display: flex;
-  flex-wrap: wrap;
-  border: solid teal;
-  justify-content: space-evenly;
-}
-
-.c, .d, .e {
-  border: solid red;
-  width: 15%;
-
-}
-
-/* F box */
-footer {
-  min-width: 10vw;
-  min-height: 10vh;
-  display: flex;
+header, .b, .c, .d, .e, footer {
   border: solid teal;
 }
 
 @media (min-width: 800px) {
   .container {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
   }
     header {
       width: 100%;
+      max-height: 10vh;
       }
-
-      main {
-        width: 70%;
+    .wrapper {
+        justify-content: stretch;
+        flex-basis: 70%;
+        min-height:  80vh;
       }
 
       footer {
-        flex-grow: 1;
-        height:
+        flex-grow: 3;
+        min-height: 80vh;
+        margin:.5em;
       }
     } 
